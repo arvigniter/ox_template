@@ -36,3 +36,12 @@ AddEventHandler('ox_groups:setGroup', function(source, group, rank)
 	local rankLabel = cache.groups[group].ranks[rank]
 	print(('%s set to %s %s (%s %s)'):format(name, group, rank, groupLabel, rankLabel))
 end)
+
+local vehicles = {}
+
+CreateThread(function()
+	vehicles[1] = Ox.CreateVehicle(false, `sultanrs`, vec(-56.479122, -1116.870362, 26.432250, 0.000030517578))
+	vehicles[2] = Ox.CreateVehicle(false, `sultanrs`, vec(-50.742858, -1116.514282, 26.432250, 0.000030517578))
+
+	print(json.encode(vehicles, {indent=true}))
+end)
