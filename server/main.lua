@@ -1,7 +1,7 @@
 ---@param source number
 ---@param new boolean
 AddEventHandler('ox:playerLoaded', function(source, new)
-	local player = Ox.Player(source)
+	local player = Player(source)
 
 	for group, rank in pairs(player.getGroups()) do
 		print(group, rank, cache.groups[group].ranks[rank])

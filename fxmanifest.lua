@@ -20,6 +20,7 @@ dependencies {
 
 shared_scripts {
     '@ox_core/imports.lua',
+	'@ox_lib/init.lua',
     'shared/main.lua',
 }
 
